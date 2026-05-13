@@ -35,5 +35,7 @@ parameters:
             - ApiPlatform\Metadata\ApiResource
 ```
 
+For classes, specified in `forbiddenFinalAttributes`, an **error will be issued** if they are finalized.
+
 ## License
 MIT

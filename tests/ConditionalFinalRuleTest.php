@@ -1,17 +1,11 @@
 <?php
 
-/*
- * LLC "HBPro"
- * Yuri Kurbatov <y.kurbatov@leaderteh.ru>
- * Date: 13.05.2026
- * Time: 16:50
- */
-
 declare(strict_types=1);
 
 namespace Topotru\ConditionalFinal\PHPStan\Tests;
 
 use Override;
+use PHPStan\DependencyInjection\MissingServiceException;
 use PHPStan\Reflection\ReflectionProvider;
 use PHPStan\Rules\Rule;
 use PHPStan\Testing\RuleTestCase;
@@ -24,6 +18,9 @@ use Topotru\ConditionalFinal\PHPStan\Tests\Fixtures\AnotherForbidden;
  */
 final class ConditionalFinalRuleTest extends RuleTestCase
 {
+    /**
+     * @throws MissingServiceException
+     */
     #[Override]
     protected function getRule(): Rule
     {

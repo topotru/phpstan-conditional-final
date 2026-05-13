@@ -1,12 +1,5 @@
 <?php
 
-/*
- * LLC "HBPro"
- * Yuri Kurbatov <y.kurbatov@leaderteh.ru>
- * Date: 13.05.2026
- * Time: 16:36
- */
-
 declare(strict_types=1);
 
 namespace Topotru\ConditionalFinal\PHPStan;

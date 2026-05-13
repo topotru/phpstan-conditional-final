@@ -6,30 +6,30 @@ namespace Topotru\ConditionalFinal\PHPStan\Tests\Fixtures;
 
 use Attribute;
 
-// Объявляем фейковые тестовые атрибуты прямо здесь
+// Declare fake test attributes right here
 #[Attribute(Attribute::TARGET_CLASS)]
 final class ProxyRequired {}
 
 #[Attribute(Attribute::TARGET_CLASS)]
 final class AnotherForbidden {}
 
-// Ошибка (строка 15): Обычный класс обязан быть final или abstract
+// Error (line 17): A concrete class must be final or abstract
 class ForgotFinalClass {}
 
-// ОК: Абстрактный класс
+// OK: Abstract class
 abstract class SampleAbstract {}
 
-// ОК: Обычный класс с final
+// OK: Regular class with final
 final class SampleFinal {}
 
-// ОК: Класс с атрибутом, мешающим final (не-final — это норма)
+// OK: Class with an attribute preventing final (non-final is normal)
 #[ProxyRequired]
 class GoodFlexibleClass {}
 
-// Ошибка (строка 27): Класс с атрибутом, но его случайно зафиналили
+// Error (line 30): Class with attribute, but it was accidentally finalized
 #[ProxyRequired]
 final class BadFinalClass {}
 
-// Ошибка (строка 31): Класс со вторым запрещенным атрибутом случайно зафиналили
+// Error (line 34): Class with second forbidden attribute accidentally finalized
 #[AnotherForbidden]
 final class AnotherBadFinalClass {}
