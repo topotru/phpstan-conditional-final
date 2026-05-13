@@ -1,0 +1,8 @@
+includes:
+    - extension.neon
+
+parameters:
+    conditionalFinal:
+        forbiddenFinalAttributes:
+            - Doctrine\ORM\Mapping\Entity
+            - Doctrine\ORM\Mapping\MappedSuperclass

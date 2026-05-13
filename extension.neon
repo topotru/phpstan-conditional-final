@@ -1,0 +1,11 @@
+parameters:
+    conditionalFinal:
+        forbiddenFinalAttributes: []
+
+services:
+    -
+        class: Topotru\ConditionalFinal\PHPStan\ConditionalFinalRule
+        arguments:
+            forbiddenFinalAttributes: %conditionalFinal.forbiddenFinalAttributes%
+        tags:
+            - phpstan.rules.rule

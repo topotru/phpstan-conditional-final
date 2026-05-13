@@ -1,0 +1,41 @@
+{
+    "name": "topotru/conditional-final-phpstan",
+    "description": "Smart final/abstract class enforcement with attributes-based exclusions for PHPStan. Perfect for Doctrine entities.",
+    "keywords": [
+        "phpstan",
+        "static-analysis",
+        "doctrine",
+        "final",
+        "architecture"
+    ],
+    "type": "phpstan-extension",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "phpstan/phpstan": "^1.10 || ^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5 || ^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Topotru\\ConditionalFinal\\PHPStan\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Topotru\\ConditionalFinal\\PHPStan\\Tests\\": "tests/"
+        },
+        "files": [
+            "tests/Fixtures/test-classes.php"
+        ]
+    },
+    "extra": {
+        "phpstan": {
+            "includes": [
+                "extension.neon"
+            ]
+        }
+    }
+}
+
