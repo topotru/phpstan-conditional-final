@@ -5,7 +5,7 @@ Smart `final`/`abstract` class enforcement with attributes-based exclusions for 
 ## Installation
 
 ```bash
-composer require --dev topotru/conditional-final-phpstan
+composer require --dev topotru/phpstan-conditional-final
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ If your project uses Doctrine, include the preconfigured preset in your `phpstan
 
 ```yaml
 includes:
-    - vendor/topotru/conditional-final-phpstan/doctrine.neon
+    - vendor/topotru/phpstan-conditional-final/doctrine.neon
 ```
 
 This preset automatically protects `#[Entity]` and `#[MappedSuperclass]` classes from being marked as `final`.
