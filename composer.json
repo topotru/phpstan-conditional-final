@@ -19,12 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Topotru\\ConditionalFinal\\PHPStan\\": "src/"
+            "Topotru\\PHPStan\\ConditionalFinal\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Topotru\\ConditionalFinal\\PHPStan\\Tests\\": "tests/"
+            "Topotru\\PHPStan\\ConditionalFinal\\Tests\\": "tests/"
         },
         "files": [
             "tests/Fixtures/test-classes.php"

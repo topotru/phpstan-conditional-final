@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Topotru\ConditionalFinal\PHPStan;
+namespace Topotru\PHPStan\ConditionalFinal;
 
 use Override;
 use PhpParser\Node;
@@ -12,7 +12,7 @@ use PHPStan\BetterReflection\Reflection\Adapter\ReflectionClass;
 use PHPStan\BetterReflection\Reflection\Adapter\ReflectionEnum;
 use PHPStan\Reflection\ReflectionProvider;
 use PHPStan\Rules\IdentifierRuleError;
-use PHPStan\Rules\Rule;
+use PHPStan\Rules\Rule as PHPStanRule;
 use PHPStan\Rules\RuleErrorBuilder;
 use PHPStan\ShouldNotHappenException;
 
@@ -20,9 +20,9 @@ use function ltrim;
 use function sprintf;
 
 /**
- * @implements Rule<Class_>
+ * @implements PHPStanRule<Class_>
  */
-final readonly class ConditionalFinalRule implements Rule
+final readonly class Rule implements PHPStanRule
 {
     /**
      * @param array<string> $forbiddenFinalAttributes

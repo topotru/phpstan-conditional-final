@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Topotru\ConditionalFinal\PHPStan\Tests\Fixtures;
+namespace Topotru\PHPStan\ConditionalFinal\Tests\Fixtures;
 
 use Attribute;
 

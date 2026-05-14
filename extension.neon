@@ -9,7 +9,7 @@ parameters:
 
 services:
     -
-        class: Topotru\ConditionalFinal\PHPStan\ConditionalFinalRule
+        class: Topotru\PHPStan\ConditionalFinal\Rule
         arguments:
             forbiddenFinalAttributes: %conditionalFinal.forbiddenFinalAttributes%
         tags:
